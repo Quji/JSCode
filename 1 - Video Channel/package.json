@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "gulp": "",
+    "gulp-sass": "",
+    "protractor": "",
+	"bower": ""
+  }
+}

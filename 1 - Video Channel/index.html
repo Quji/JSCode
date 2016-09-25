@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Index</title>
+
+    <!-- Styles -->
+    <link media="all" rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link media="all" rel="stylesheet" href="./css/style.css">
+
+    <!-- Scripts -->
+    <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="./bower_components/angular/angular.min.js"></script>
+    <script src="./bower_components/angular-classy/angular-classy.js"></script>
+    <script src="./bower_components/angular-recursion/angular-recursion.min.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./scripts/videoController.js"></script>
+    <script src="./scripts/scheduleController.js"></script>
+    <script src="./scripts/commentsController.js"></script>
+    <script src="./scripts/messagesController.js"></script>
+</head>
+<body ng-app="main">
+
+<div id="container">
+    <div id="top">
+        <div class="right">
+            <div class="messages" ng-controller="messagesController">
+                <i class="glyphicon glyphicon-comment" ng-click="toggle()"></i>
+                <div class="popup" ng-show="show">
+                    <div class="head"></div>
+                    <div class="info">
+                        <h5 class="text-right"><a ng-click="readAll()">Отметить все как прочитанное</a></h5>
+                        <h5>Сообщения ({{ getUnread() }})</h5>
+                    </div>
+                    <message ng-repeat="Message in Messages" ng-class="getClass()">
+                        <div class="avatar"></div>
+                        <div class="author">{{ Message.author }}<div class="icon" ng-click="toggle()"><i ng-class="getIconClass()"></i></div></div>
+                        <div class="text">{{ Message.text }}</div>
+                        <div class="date">{{ Message.date }}</div>
+                    </message>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="header"></div>
+
+    <div id="content">
+
+        <div id="left">
+            <div class="block">
+                <img src="./images/player.png">
+            </div>
+            <div id="tabs" class="block">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Хроника</button>
+                    <button type="button" class="btn btn-default">Информация</button>
+                    <button type="button" class="btn btn-default">Статистика</button>
+                    <button type="button" class="btn btn-default">Подписаться</button>
+                    <button type="button" class="btn btn-default">Смотрят</button>
+                </div>
+            </div>
+
+            <div id="comments" ng-controller="commentsController">
+                <div class="block-title"><i class="glyphicon glyphicon-user"></i> Обсуждение передачи</div>
+                <comments-list comments="Comments"></comments-list>
+                <div class="block-title"><i class="glyphicon glyphicon-user"></i> Обсудить</div>
+                <div class="form">
+                    <div class="avatar"></div>
+                    <div class="textarea"><textarea ng-keyup="trySend($event)"></textarea></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="right">
+            <div id="schedule" class="block" ng-controller="scheduleController">
+                <div class="schedule-title clearfix">
+                    <div class="pull-left">Программа Передач:</div>
+                    <div class="pull-right">
+                        <button class="btn btn-default">Прямой эфир</button>
+                    </div>
+                </div>
+                <div class="block-title">12 Января 2015</div>
+                <div class="schedule-list">
+                    <div class="item" ng-repeat="Schedule in Schedules">
+                        <p>{{ Schedule.date }}</p>
+                        <p><a href="#">{{ Schedule.title }}</a></p>
+                        <a class="discuss" ng-click="loadComments(Schedule.id)"><i class="glyphicon glyphicon-user"></i></a>
+                        <p>{{ Schedule.desc }}</p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="this-week">
+                <div class="block-title">На этой неделе:</div>
+                <div class="row">
+                    <div class="col-xs-3">5</div>
+                    <div class="col-xs-9">Новых подписчиков</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">3</div>
+                    <div class="col-xs-9">Новых обсуждения</div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-3">3612</div>
+                    <div class="col-xs-9">Посещений канала</div>
+                </div>
+            </div>
+
+            <div id="news">
+                <div class="news">
+                    <img src="./images/news-1.png">
+                    <div class="text blue">AUTO PLUS - Все об автомобилях</div>
+                </div>
+                <div class="news">
+                    <img src="./images/news-2.png">
+                    <div class="text orange">Pirelli является синонимом инновация в области производства шин</div>
+                </div>
+                <div class="news">
+                    <img src="./images/news-3.png">
+                    <div class="text blue">АВТОСАЛОН БОГАТЕЕВО<br>Наши авто могут все!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="video" ng-controller="videoController">
+        <div class="col-xs-12 block-title">Рекомендуем:</div>
+        <div class="col-xs-3" ng-repeat="Video in Videos">
+            <div class="video"><img ng-src="{{ Video.img }}">
+                <div class="info">{{ Video.title }}
+                    <i class="fa fa-star-o"> {{ Video.stars }}</i>
+                    <i class="fa fa-eye"> {{ Video.views }}</i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

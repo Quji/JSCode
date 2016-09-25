@@ -1,0 +1,181 @@
+#container {
+  width: 730px;
+  min-width: 730px;
+  margin: 0 auto; }
+
+#top {
+  height: 24px;
+  background-color: #666; }
+  #top .right {
+    float: right;
+    margin-right: 10px; }
+    #top .right .glyphicon {
+      margin-top: 3px; }
+  #top .messages {
+    position: relative; }
+    #top .messages .popup {
+      position: absolute;
+      width: 350px;
+      background-color: white;
+      top: 24px;
+      right: 0;
+      border: 1px solid #000;
+      z-index: 1000; }
+      #top .messages .popup .head {
+        height: 10px;
+        width: 100%;
+        background-color: #2258A0; }
+      #top .messages .popup .info {
+        padding: 0 5px;
+        font-weight: bold; }
+      #top .messages .popup message {
+        overflow: hidden;
+        display: block;
+        margin-bottom: 3px;
+        padding: 0 5px 3px 5px;
+        border-bottom: 1px solid #ddd; }
+        #top .messages .popup message.blue {
+          background-color: #F3F7FA; }
+        #top .messages .popup message .avatar {
+          width: 50px;
+          height: 50px;
+          float: left;
+          background-color: #B0F0FF; }
+        #top .messages .popup message .author, #top .messages .popup message .text, #top .messages .popup message .date {
+          margin-left: 55px;
+          font-size: 85%; }
+        #top .messages .popup message .date, #top .messages .popup message .text {
+          color: #8D8D8B; }
+        #top .messages .popup message .author {
+          font-weight: bold; }
+        #top .messages .popup message .icon {
+          float: right; }
+
+#header {
+  background: url("../images/header.png") no-repeat;
+  width: 100%;
+  height: 180px; }
+
+#content {
+  margin-top: 5px; }
+  #content #left {
+    width: 485px;
+    float: left;
+    margin-right: 6px; }
+  #content #right {
+    width: 239px;
+    float: right; }
+    #content #right .row {
+      margin: 0 auto; }
+
+.block {
+  margin-bottom: 5px; }
+
+.block-title {
+  background-color: #666;
+  color: #CCCCC4;
+  padding: 1px 0 1px 5px;
+  margin-bottom: 5px; }
+
+#tabs .btn {
+  padding-top: 2px;
+  padding-bottom: 2px; }
+
+#comments {
+  margin-top: 5px; }
+  #comments .avatar {
+    border: 1px solid #333;
+    width: 50px;
+    height: 40px;
+    float: left; }
+  #comments .comment {
+    margin-bottom: 5px;
+    font-size: 85%;
+    overflow: hidden; }
+    #comments .comment .author {
+      font-weight: bold; }
+    #comments .comment .author, #comments .comment .text, #comments .comment .date {
+      margin-left: 60px; }
+    #comments .comment .date {
+      font-size: 80%;
+      color: #aaa; }
+    #comments .comment .likes {
+      margin-top: 3px;
+      font-size: 90%; }
+      #comments .comment .likes .who {
+        float: left; }
+      #comments .comment .likes .like {
+        float: right;
+        margin-right: 40px; }
+        #comments .comment .likes .like a.thumbs {
+          display: inline-block;
+          width: 30px;
+          margin-left: 5px; }
+  #comments .form .textarea {
+    margin-left: 60px; }
+    #comments .form .textarea textarea {
+      font-size: 85%;
+      width: 100%;
+      height: 40px; }
+
+#schedule .schedule-title {
+  margin-bottom: 3px; }
+  #schedule .schedule-title .btn {
+    position: relative;
+    top: -2px;
+    padding: 0 10px;
+    font-size: 80%; }
+#schedule .schedule-list {
+  overflow-y: scroll;
+  height: 253px; }
+  #schedule .schedule-list .item {
+    border-top: 1px solid #DFE3E6;
+    border-bottom: 1px solid #DFE3E6;
+    margin-bottom: 2px;
+    font-size: 97%; }
+    #schedule .schedule-list .item p {
+      margin-bottom: 2px; }
+    #schedule .schedule-list .item .discuss {
+      float: right; }
+
+#this-week {
+  margin-bottom: 5px; }
+  #this-week .row {
+    height: 50px;
+    line-height: 50px;
+    background-color: #f0f0f0;
+    text-align: center;
+    border-bottom: 2px solid #bbb; }
+  #this-week .col-xs-3 {
+    color: #008B8B;
+    font-weight: bolder; }
+
+#news {
+  margin-bottom: 15px; }
+  #news .news {
+    margin-bottom: 5px; }
+    #news .news img {
+      width: 100%; }
+    #news .news .text {
+      height: 45px;
+      font-size: 90%;
+      text-align: center;
+      padding: 5px 5px 0 5px;
+      color: #EEE; }
+    #news .news .blue {
+      background-color: #00869C; }
+    #news .news .orange {
+      background-color: #FF7000; }
+
+#video .col-xs-3 {
+  padding: 0 10px; }
+#video .video {
+  padding: 5px;
+  border: 2px solid #E3E3E3;
+  border-radius: 10px; }
+  #video .video img {
+    max-width: 100%; }
+  #video .video .info {
+    text-align: center;
+    background-color: #7E7E7E;
+    color: #EEE; }

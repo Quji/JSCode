@@ -1,0 +1,13 @@
+
+.container {
+    width: 830px;
+}
+
+world {
+    display: block;
+    text-align: center;
+}
+
+.p-t-2 {
+    padding-top: 2rem;
+}

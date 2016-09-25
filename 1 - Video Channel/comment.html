@@ -1,0 +1,18 @@
+<div class="comment" ng-style="level()">
+    <div class="avatar"></div>
+    <div class="author"><a href="#">{{Comment.author }}</a></div>
+    <div class="date">{{Comment.date }}</div>
+    <div class="text">{{Comment.text }}</div>
+    <div class="likes">
+        <div class="who" ng-show="Comment.likes > 1">
+            <a href="#">{{ Comment.who.join(' ') }}</a> и ещё {{ Comment.likes - Comment.who.length }} <a href="#">{{ other(Comment.likes - Comment.who.length) }}</a> это нравится
+        </div>
+        <div class="like">
+            <a ng-click="answer($event)">Ответить</a>
+            <a ng-click="like()" class="thumbs"><i class="glyphicon glyphicon-thumbs-up"></i> {{ Comment.likes }}</a>
+            <a ng-click="dislike()" class="thumbs"><i class="glyphicon glyphicon-thumbs-down"></i> {{Comment.dislikes }}</a>
+        </div>
+    </div>
+</div>
+
+<comment ng-repeat="Children in Comment.children" comment="Children"></comment>
