@@ -1,0 +1,24 @@
+@import "base.css";
+
+.root {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.tab {
+  display: block;
+  text-align: center;
+  width: 100%;
+  background-color: #fff;
+  padding: 10px 0;
+  &:not(:last-child) {
+    border-right: 1px solid var(--color-border);
+  }
+
+  &.active {
+    font-weight: bold;
+    background-color: transparent;
+  }
+}

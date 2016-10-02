@@ -9,3 +9,7 @@
 * AngularJS
 * Matter.js
 * Twitter Bootstrap
+
+### 3. [Переключатель](./3%20-%20Switcher)
+* React
+* Redux

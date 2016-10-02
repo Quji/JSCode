@@ -1,0 +1,32 @@
+@import "base";
+
+.root {
+  background-color: #fff;
+}
+
+
+html, body, h1, h2, h3, h4, h5, h6, p, ol, ul, li, dl, dt, dd, blockquote, address {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  min-width: var(--content-width);
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+input[type="checkbox"] {
+  margin: 0;
+  position: relative;
+  top: 2px;
+}
+
+a {
+ text-decoration: none;
+}
