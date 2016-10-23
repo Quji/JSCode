@@ -1,5 +1,5 @@
 {
-  "name": "3 - Switcher",
+  "name": "Switcher",
   "version": "1.0.0",
   "scripts": {
     "start": "node server.js",
