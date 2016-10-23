@@ -1,0 +1,22 @@
+@import "base";
+
+.root {
+  display: table-row;
+  & > * {
+    border-top: 20px solid transparent;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.to {
+  width: 200px;
+  font-size: 3em;
+  text-align: center;
+}
+
+.result {
+  font-size: 1.5em;
+  color: darkgreen;
+  padding: 7px 5px;
+}

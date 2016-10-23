@@ -1,0 +1,9 @@
+@import "base";
+
+.root {
+  font-weight: 500;
+  font-size: 1.7em;
+  &:hover {
+    color: blue;
+  }
+}

@@ -1,0 +1,25 @@
+@import "base";
+
+.root {
+  display: table-row;
+  & > * {
+    border-top: 20px solid transparent;
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.from {
+  width: 200px;
+  font-size: 3em;
+  text-align: center;
+}
+
+.input {
+  padding: 7px 5px;
+  align-items: center;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  font-size: 1.5em;
+}

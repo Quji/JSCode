@@ -1,0 +1,8 @@
+export const ACTION_CHANGE_INPUT = 'ACTION_CHANGE_INPUT';
+export const ACTION_CHANGE_FROM = 'ACTION_CHANGE_FROM';
+export const ACTION_CHANGE_TO = 'ACTION_CHANGE_TO';
+
+export const DEFAULT_FROM = 'EUR';
+export const DEFAULT_TO = 'USD';
+
+
